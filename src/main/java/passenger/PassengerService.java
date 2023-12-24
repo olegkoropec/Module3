@@ -20,10 +20,6 @@ public class PassengerService {
     }
 
     public void validation(Passenger passenger) {
-        if (Objects.isNull(passenger)) {
-            LOGGER.warn("Passenger is null");
-            throw new InvalidParamException("Passenger is null");
-        }
         if (passenger.getName().isEmpty()) {
             LOGGER.warn("Passenger firstName is empty");
             throw new InvalidParamException("Passenger firstName is empty");

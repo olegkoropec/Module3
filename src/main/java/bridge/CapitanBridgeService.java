@@ -2,10 +2,12 @@ package bridge;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import static reference.Answers.*;
 
-public class CapitanBridgeMain {
-    public static final Logger LOGGER = LoggerFactory.getLogger(CapitanBridgeMain.class);
+import static reference.Answer.*;
+import static reference.ToPage.*;
+
+public class CapitanBridgeService {
+    public static final Logger LOGGER = LoggerFactory.getLogger(CapitanBridgeService.class);
 
     public String whoAreYou(String result) {
         String referenceToPage;
@@ -17,5 +19,13 @@ public class CapitanBridgeMain {
             referenceToPage = DISAPPROVE;
         }
         return referenceToPage;
+    }
+
+    public String answer(String result){
+        String answer;
+        if (result.equals("responseYes"))
+            answer = ANSWERYES2;
+        else answer = ANSWERNO2;
+        return answer;
     }
 }

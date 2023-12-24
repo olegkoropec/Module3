@@ -5,7 +5,7 @@
 </head>
 <body>
 <form action="/take-call4" method="post">
-    <h1>Правда про себе</h1>
+    <h1><%=request.getAttribute("reply")%></h1>
     Name: <input type="text" name="name"/> <br><br>
     Surname: <input type="text" name="surname"/> <br><br>
     Age: <input type="date" name="age"><br><br>

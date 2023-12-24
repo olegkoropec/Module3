@@ -4,7 +4,7 @@
     <title>Looser</title>
 </head>
 <body>
-<%--    ${response}--%>
     <h1>Ви програли!!!</h1>
+    <h1><%= request.getAttribute("reply")%></h1>
 </body>
 </html>

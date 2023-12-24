@@ -1,4 +1,4 @@
-package startConversation;
+package whoIsYou;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,13 +7,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/take-call1")
-public class StartConversation extends HttpServlet {
-    StartConversationMain conversationMain = new StartConversationMain();
+@WebServlet("/take-call3")
+public class WhoIsYouServlet extends HttpServlet {
+    WhoIsYouService whoIsYouService = new WhoIsYouService();
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String option = req.getParameter("option");
-        String bridge = conversationMain.toBridge(option);
+        req.setAttribute("reply", whoIsYouService.answer(option));
+        String bridge = whoIsYouService.trueYourself(option);
         req.getRequestDispatcher(bridge).forward(req, resp);
     }
 }
+
+
+
+
