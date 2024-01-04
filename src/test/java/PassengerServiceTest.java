@@ -1,7 +1,7 @@
-import exceptions.InvalidParamException;
+import exception.InvalidParamException;
 import org.junit.jupiter.api.Test;
 import passenger.Passenger;
-import passenger.PassengerService;
+import service.PassengerService;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PassengerServiceTest {

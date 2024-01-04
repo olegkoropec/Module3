@@ -1,4 +1,6 @@
-package whoIsYou;
+package web;
+
+import service.WhoIsYouService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

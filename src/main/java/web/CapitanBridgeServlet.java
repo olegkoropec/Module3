@@ -1,4 +1,6 @@
-package bridge;
+package web;
+
+import service.CapitanBridgeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

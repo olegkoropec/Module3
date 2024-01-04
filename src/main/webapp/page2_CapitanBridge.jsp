@@ -5,6 +5,7 @@
 </head>
 <body>
 <form action="/take-call2" method="post">
+    <h1> <%= (String) session.getAttribute("namePassenger") %> </h1>
     <h1><%= request.getAttribute("reply")%></h1>
     <h1> Піднятися на капітанський місток?</h1>
     Так <input type="radio" name="option" id="yes" value="responseYes"><br><br>

@@ -1,4 +1,6 @@
-package startConversation;
+package web;
+
+import service.StartConversationService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

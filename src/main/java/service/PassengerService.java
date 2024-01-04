@@ -1,10 +1,9 @@
-package passenger;
+package service;
 
-import exceptions.InvalidParamException;
+import exception.InvalidParamException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Objects;
+import passenger.Passenger;
 import java.util.regex.Pattern;
 
 public class PassengerService {

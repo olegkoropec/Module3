@@ -1,4 +1,7 @@
-package passenger;
+package web;
+
+import passenger.Passenger;
+import service.PassengerService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

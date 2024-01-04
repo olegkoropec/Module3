@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>passenger.Passenger Form</title>
+    <title>Welcome</title>
 </head>
 <body>
-<form action="/page1_LostMemory.jsp" method="get">
+<form action="/page0.jsp" method="get">
     <h3>Привіт. Це welcome-сторінка до текстової квесту-гри фінального проєкту Модуля3.</h3>
     <h3> Треба буде відповісти на кілька питань у форматі "Так" чи "Ні".</h3>
     <h3> Якщо відповідати стверджувано, то квест-гру можна пройти до кінця.</h3>

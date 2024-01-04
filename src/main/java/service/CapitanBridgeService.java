@@ -1,4 +1,4 @@
-package bridge;
+package service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,11 +12,15 @@ public class CapitanBridgeService {
     public String whoAreYou(String result) {
         String referenceToPage;
         if (result.equals("responseYes")) {
-            LOGGER.info("Відповідь прийнята на питання \"Піднятися на капітанський місток?\" ");
+            LOGGER.info("The answer is accepted to the question \"Climb the captain's bridge?\" ");
             referenceToPage = APPROVE_PAGE3;
-        } else {
-            LOGGER.warn("Відповідь відхилено на питання \"Піднятися на капітанський місток?\" ");
+        } else if (result.equals("responseNo")){
+            LOGGER.warn("The answer is rejected to the question \"Climb the captain's bridge?\" ");
             referenceToPage = DISAPPROVE;
+        }
+        else {
+            LOGGER.warn("The answer is incorrect");
+            referenceToPage = INCORRECT;
         }
         return referenceToPage;
     }
@@ -25,7 +29,9 @@ public class CapitanBridgeService {
         String answer;
         if (result.equals("responseYes"))
             answer = ANSWERYES2;
-        else answer = ANSWERNO2;
+        else if(result.equals("responseNo"))
+            answer = ANSWERNO2;
+        else answer = ANSWERINCORRECT;
         return answer;
     }
 }
