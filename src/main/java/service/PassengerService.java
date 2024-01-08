@@ -12,7 +12,6 @@ public class PassengerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PassengerService.class);
 
-
     public void create(Passenger passenger) {
         LOGGER.info("User received: " + passenger);
         validation(passenger);

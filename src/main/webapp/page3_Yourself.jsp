@@ -4,7 +4,7 @@
     <title>Talk about yourself</title>
 </head>
 <body>
-<form action="/take-call3" method="post">
+<form action="/whoAreYou" method="post">
     <h1> <%= (String) session.getAttribute("namePassenger") %> </h1>
     <h1><%=request.getAttribute("reply")%></h1>
     <h1> Хто ви?</h1>

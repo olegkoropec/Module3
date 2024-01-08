@@ -9,17 +9,17 @@ class StartConversationServiceTest {
 
     @Test
     void toBridgeYes() {
-        assertEquals(startConversationService.toBridge("responseYes"), "/page2_CapitanBridge.jsp");
+        assertEquals(startConversationService.climbToCapitanBridge("responseYes"), "/page2_CapitanBridge.jsp");
     }
 
     @Test
     void toBridgeNo(){
-        assertEquals(startConversationService.toBridge("responseNo"), "/refusal.jsp");
+        assertEquals(startConversationService.climbToCapitanBridge("responseNo"), "/refusal.jsp");
     }
 
     @Test
     void toBridgeAnother(){
-        assertEquals(startConversationService.toBridge(""), "/incorrectResponse.jsp");
+        assertEquals(startConversationService.climbToCapitanBridge(""), "/incorrectResponse.jsp");
     }
 
     @Test

@@ -4,7 +4,7 @@
     <title>Lost memory</title>
 </head>
 <body>
-<form action="/take-call1" method="post">
+<form action="/startConversation" method="post">
     <h1> <%= (String) session.getAttribute("namePassenger") %> </h1>
     <h1>Ви втрачаєте пам'ять. Прийнати виклик НЛО?</h1>
     Прийняти виклик <input type="radio" name="option" id="yes" value="responseYes"><br><br>

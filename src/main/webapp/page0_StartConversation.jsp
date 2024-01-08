@@ -4,7 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/take-call0" method="post">
+<form action="/startQuest" method="post">
     <h2> Введіть своє ім'я </h2>
     Name: <input type="text" name="name"/> <br><br>
     <input type="submit" value="ВІДПОВІСТИ">

@@ -4,7 +4,7 @@
     <title>Questionnaire</title>
 </head>
 <body>
-<form action="/take-call4" method="post">
+<form action="/aboutPassenger" method="post">
     <h1><%=request.getAttribute("reply")%></h1>
     Name: <input type="text" name="name"/> <br><br>
     Surname: <input type="text" name="surname"/> <br><br>

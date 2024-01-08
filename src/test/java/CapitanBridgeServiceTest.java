@@ -6,17 +6,17 @@ public class CapitanBridgeServiceTest {
 
     @Test
     void whoAreYouYes(){
-        assertEquals(capitanBridgeService.whoAreYou("responseYes"), "responseYes");
+        assertEquals(capitanBridgeService.talkAboutYourself("responseYes"), "responseYes");
     }
 
     @Test
     void whoAreYouNo(){
-        assertEquals(capitanBridgeService.whoAreYou("responseNo"), "/refusal.jsp");
+        assertEquals(capitanBridgeService.talkAboutYourself("responseNo"), "/refusal.jsp");
     }
 
     @Test
     void whoAreYouAnother(){
-        assertEquals(capitanBridgeService.whoAreYou(""), "/incorrectResponse.jsp");
+        assertEquals(capitanBridgeService.talkAboutYourself(""), "/incorrectResponse.jsp");
     }
 
     @Test

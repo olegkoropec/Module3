@@ -1,37 +1,37 @@
 import org.junit.jupiter.api.Test;
-import service.WhoIsYouService;
+import service.WhoAreYouService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WhoIsYouServiceTest {
-    WhoIsYouService whoIsYouService = new WhoIsYouService();
+    WhoAreYouService whoAreYouService = new WhoAreYouService();
     @Test
     void trueYourselfYes(){
-        assertEquals( whoIsYouService.trueYourself("responseYes"), "/page4_Questionnaire.jsp");
+        assertEquals( whoAreYouService.isTrueAboutYourself("responseYes"), "/page4_Questionnaire.jsp");
     }
 
     @Test
     void trueYourselfNo(){
-        assertEquals( whoIsYouService.trueYourself("responseNo"), "/refusal.jsp");
+        assertEquals( whoAreYouService.isTrueAboutYourself("responseNo"), "/refusal.jsp");
     }
 
     @Test
     void trueYourselfAnother(){
-        assertEquals(whoIsYouService.trueYourself(""), "/incorrectResponse.jsp");
+        assertEquals(whoAreYouService.isTrueAboutYourself(""), "/incorrectResponse.jsp");
     }
 
     @Test
     void answerYes(){
-        assertEquals(whoIsYouService.answer("responseYes"), "Ви захотіли розповісти про себе! ");
+        assertEquals(whoAreYouService.answer("responseYes"), "Ви захотіли розповісти про себе! ");
     }
 
     @Test
     void answerNo(){
-        assertEquals(whoIsYouService.answer("responseNo"), "Ваша брехня була викрита! ");
+        assertEquals(whoAreYouService.answer("responseNo"), "Ваша брехня була викрита! ");
     }
 
     @Test
     void answerAnother(){
-        assertEquals(whoIsYouService.answer(""), "Ви відповіли не коректно!");
+        assertEquals(whoAreYouService.answer(""), "Ви відповіли не коректно!");
     }
 }

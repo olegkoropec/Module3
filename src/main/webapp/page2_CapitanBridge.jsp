@@ -4,7 +4,7 @@
     <title>Capitan Bridge</title>
 </head>
 <body>
-<form action="/take-call2" method="post">
+<form action="/capitanBridge" method="post">
     <h1> <%= (String) session.getAttribute("namePassenger") %> </h1>
     <h1><%= request.getAttribute("reply")%></h1>
     <h1> Піднятися на капітанський місток?</h1>

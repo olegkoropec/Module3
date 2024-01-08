@@ -9,7 +9,7 @@ import static reference.ToPage.*;
 public class CapitanBridgeService {
     public static final Logger LOGGER = LoggerFactory.getLogger(CapitanBridgeService.class);
 
-    public String whoAreYou(String result) {
+    public String talkAboutYourself(String result) {
         String referenceToPage;
         if (result.equals("responseYes")) {
             LOGGER.info("The answer is accepted to the question \"Climb the captain's bridge?\" ");

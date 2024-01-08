@@ -9,7 +9,7 @@ import static reference.ToPage.*;
 public class StartConversationService {
     public static final Logger LOGGER = LoggerFactory.getLogger(StartConversationService.class);
 
-    public String toBridge(String result) {
+    public String climbToCapitanBridge(String result) {
         String referenceToPage;
         if (result.equals("responseYes")) {
             LOGGER.info("Answer accepted to the question \"Accept UFO call?\" ");
@@ -21,7 +21,6 @@ public class StartConversationService {
         else {
             LOGGER.warn("The answer is incorrect");
             referenceToPage = INCORRECT;
-
         }
         return referenceToPage;
     }
