@@ -3,7 +3,7 @@ package service;
 import exception.InvalidParamException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import passenger.User;
+import user.User;
 import java.util.regex.Pattern;
 
 public class UserService {
@@ -19,28 +19,28 @@ public class UserService {
 
     public void validation(User user) {
         if (user.getName().isEmpty()) {
-            LOGGER.warn("Passenger firstName is empty");
-            throw new InvalidParamException("Passenger firstName is empty");
+            LOGGER.warn("User firstName is empty");
+            throw new InvalidParamException("User firstName is empty");
         }
         if (user.getSurname().isEmpty()) {
-            LOGGER.warn("Passenger surname is empty");
-            throw new InvalidParamException("Passenger surname is empty");
+            LOGGER.warn("User surname is empty");
+            throw new InvalidParamException("User surname is empty");
         }
         if (user.getAge().isEmpty()) {
-            LOGGER.warn("Passenger age is is empty");
-            throw new InvalidParamException("Passenger age is empty");
+            LOGGER.warn("User age is is empty");
+            throw new InvalidParamException("User age is empty");
         }
         if (user.getCountry().isEmpty()) {
-            LOGGER.warn("Passenger country is empty");
-            throw new InvalidParamException("Passenger country is empty");
+            LOGGER.warn("User country is empty");
+            throw new InvalidParamException("User country is empty");
         }
         if (user.getEmail().isEmpty()) {
-            LOGGER.warn("Passenger email is empty");
-            throw new InvalidParamException("Passenger email is empty");
+            LOGGER.warn("User email is empty");
+            throw new InvalidParamException("User email is empty");
         }
         if (!VALID_EMAIL_ADDRESS_REGEX.matcher(user.getEmail()).matches()) {
-            LOGGER.warn("Passenger email is invalid");
-            throw new InvalidParamException("Passenger email is invalid");
+            LOGGER.warn("User email is invalid");
+            throw new InvalidParamException("User email is invalid");
         }
     }
 }

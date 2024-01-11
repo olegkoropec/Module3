@@ -1,6 +1,6 @@
 package web;
 
-import passenger.User;
+import user.User;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/aboutPassenger")
+@WebServlet("/aboutUser")
 public class UserServlet extends HttpServlet {
     UserService userService = new UserService();
     @Override
@@ -22,7 +22,7 @@ public class UserServlet extends HttpServlet {
                 req.getParameter("country"),
                 req.getParameter("email"));
         userService.create(user);
-        req.setAttribute("passenger", user.toString());
+        req.setAttribute("user", user.toString());
         req.getRequestDispatcher("page5_Victory.jsp").forward(req, resp);
     }
 }

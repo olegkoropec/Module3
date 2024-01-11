@@ -1,6 +1,6 @@
 import exception.InvalidParamException;
 import org.junit.jupiter.api.Test;
-import passenger.User;
+import user.User;
 import service.UserService;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,19 +13,19 @@ public class UserServiceTest {
     User userEmailNotCorrect = new User("gender","name","surname","age","country","emailgmailcom");
 
     @Test
-    void createPassengerIsNull() {
+    void createUserIsNull() {
         assertThrows(InvalidParamException.class, () -> new UserService().create(null));
     }
 
     @Test
-    void validationPassengerIsNull(){
+    void validationUserIsNull(){
         assertThrows(InvalidParamException.class, () -> new UserService().validation(null));
     }
 
     @Test
-    void validationPassengerIsNullMessage(){
+    void validationUserIsNullMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(null));
-        assertEquals("Passenger is null", exception.getMessage());
+        assertEquals("User is null", exception.getMessage());
     }
 
     @Test
@@ -36,7 +36,7 @@ public class UserServiceTest {
     @Test
     void validationNameIsEmptyMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(userNameEmpty));
-        assertEquals("Passenger firstName is empty", exception.getMessage());
+        assertEquals("User firstName is empty", exception.getMessage());
 
     }
 
@@ -48,7 +48,7 @@ public class UserServiceTest {
     @Test
     void validationSurnameIsEmptyMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(userSurnameEmpty));
-        assertEquals("Passenger surname is empty", exception.getMessage());
+        assertEquals("User surname is empty", exception.getMessage());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class UserServiceTest {
     @Test
     void validationAgeIsEmptyMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(userAgeEmpty));
-        assertEquals("Passenger age is empty", exception.getMessage());
+        assertEquals("User age is empty", exception.getMessage());
     }
 
     @Test
@@ -70,7 +70,7 @@ public class UserServiceTest {
     @Test
     void validationCountryIsEmptyMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(userCountryEmpty));
-        assertEquals("Passenger country is empty", exception.getMessage());
+        assertEquals("User country is empty", exception.getMessage());
     }
 
     @Test
@@ -81,7 +81,7 @@ public class UserServiceTest {
     @Test
     void validationEmailIsEmptyMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(userEmailEmpty));
-        assertEquals("Passenger email is empty", exception.getMessage());
+        assertEquals("User email is empty", exception.getMessage());
     }
 
     @Test
@@ -92,6 +92,6 @@ public class UserServiceTest {
     @Test
     void validationEmailNotCorrectMessage(){
         InvalidParamException exception = assertThrows(InvalidParamException.class, () -> new UserService().validation(userEmailNotCorrect));
-        assertEquals("Passenger email is invalid", exception.getMessage());
+        assertEquals("User email is invalid", exception.getMessage());
     }
 }
