@@ -2,7 +2,7 @@ package passenger;
 
 import java.util.Objects;
 
-public class Passenger {
+public class User {
     String gender;
     String name;
     String surname;
@@ -10,7 +10,7 @@ public class Passenger {
     String country;
     String email;
 
-    public Passenger(String gender, String name, String surname, String age, String country, String email) {
+    public User(String gender, String name, String surname, String age, String country, String email) {
         this.gender = gender;
         this.name = name;
         this.surname = surname;
@@ -43,8 +43,8 @@ public class Passenger {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Passenger passenger = (Passenger) o;
-        return Objects.equals(gender, passenger.gender) && Objects.equals(name, passenger.name) && Objects.equals(surname, passenger.surname) && Objects.equals(age, passenger.age) && Objects.equals(country, passenger.country) && Objects.equals(email, passenger.email);
+        User user = (User) o;
+        return Objects.equals(gender, user.gender) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(age, user.age) && Objects.equals(country, user.country) && Objects.equals(email, user.email);
     }
 
     @Override

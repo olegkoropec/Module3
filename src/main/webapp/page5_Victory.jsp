@@ -4,7 +4,7 @@
     <title>Victory</title>
 </head>
 <body>
-<h2><%= request.getAttribute("passenger")%>
+<h2><%= request.getAttribute("user")%>
 </h2>
 <h1> Вас повернуто додому</h1>
 

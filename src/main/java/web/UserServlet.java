@@ -1,7 +1,7 @@
 package web;
 
-import passenger.Passenger;
-import service.PassengerService;
+import passenger.User;
+import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,18 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/aboutPassenger")
-public class PassengerServlet extends HttpServlet {
-    PassengerService passengerService = new PassengerService();
+public class UserServlet extends HttpServlet {
+    UserService userService = new UserService();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Passenger passenger = new Passenger(req.getParameter("gender"),
+        User user = new User(req.getParameter("gender"),
                 req.getParameter("name"),
                 req.getParameter("surname"),
                 req.getParameter("age"),
                 req.getParameter("country"),
                 req.getParameter("email"));
-        passengerService.create(passenger);
-        req.setAttribute("passenger", passenger.toString());
+        userService.create(user);
+        req.setAttribute("passenger", user.toString());
         req.getRequestDispatcher("page5_Victory.jsp").forward(req, resp);
     }
 }
